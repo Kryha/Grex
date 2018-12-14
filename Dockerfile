@@ -6,8 +6,6 @@ WORKDIR /usr/src/app
 
 # Install app
 
-RUN npm i -g concurrently
-
 RUN mkdir Backend
 
 COPY Backend/package*.json Backend/

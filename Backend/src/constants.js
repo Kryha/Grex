@@ -1,4 +1,4 @@
-let BDB_HOST = process.env.BDB || localhost
+let BDB_HOST = process.env.BDB || 'localhost'
 
 
 const DB_ENDPOINT = {

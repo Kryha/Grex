@@ -2,3 +2,4 @@ Backend/node_modules
 Backend/logs
 Backend/graphs
 Frontend/node_modules
+.env

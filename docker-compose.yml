@@ -38,6 +38,9 @@ services:
         command: sh -c "tendermint init && tendermint node --consensus.create_empty_blocks=false --proxy_app=tcp://bigchaindb:26658 --log_level=error"
 
     grex:
+        environment:
+          - REACT_APP_GOOGLE_MAPS_API=$REACT_APP_GOOGLE_MAPS_API
+          - BDB=$BDB
         depends_on:
           - bigchaindb
         image: kryha/grex:latest
