@@ -1,6 +1,9 @@
+let BDB_HOST = process.env.BDB || localhost
+
+
 const DB_ENDPOINT = {
-  db: 'http://127.0.0.1:9984/api/v1/',
-  ws: 'ws://127.0.0.1:9985/api/v1/streams/valid_transactions'
+  db: "http://"+BDB_HOST+":9984/api/v1/",
+  ws: "ws://"+BDB_HOST+":9985/api/v1/streams/valid_transactions"
 }
 const DRONE_PARAMS = {
   agents: 1,

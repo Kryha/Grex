@@ -12,11 +12,11 @@ RUN mkdir Backend
 
 COPY Backend/package*.json Backend/
 
-RUN cd Backend && npm i
-
 RUN mkdir Frontend
 
 COPY Frontend/package*.json Frontend/
+
+RUN cd Backend && npm i
 
 RUN cd Frontend && npm i
 
