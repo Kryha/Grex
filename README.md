@@ -1,6 +1,6 @@
 # Grex
 
-- Replace the the REACT_APP_GOOGLE_MAPS_API in docker-compose.yml with a real Google Maps API Key: `https://cloud.google.com/maps-platform/#get-started`
+- Replace the the `REACT_APP_GOOGLE_MAPS_API` in `docker-compose.yml` with a real Google Maps API Key: `https://cloud.google.com/maps-platform/#get-started`
 
 - For vanilla docker run: `docker-compose up grex`
 
