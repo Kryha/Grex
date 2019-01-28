@@ -1,9 +1,10 @@
 # Grex
 
 - Create a .env file in the root with the following contents:
-
-`REACT_APP_GOOGLE_MAPS_API=APIKEY`
-`BDB=bigchaindb`
+```
+REACT_APP_GOOGLE_MAPS_API=APIKEY
+BDB=bigchaindb
+```
 
 Replace the the `APIKEY` with a real Google Maps API Key: `https://cloud.google.com/maps-platform/#get-started`
 
