@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+    mongodb:
+        image: mongo:latest
+        ports:
+          - "27017:27017"
+        command: "mongod -quiet"
+
+    bigchaindb:
+        depends_on:
+          - mongodb
+          - tendermint
+        image: kryha/bigchaindb:arm64
+        environment:
+          BIGCHAINDB_DATABASE_BACKEND: localmongodb
+          BIGCHAINDB_DATABASE_HOST: mongodb
+          BIGCHAINDB_DATABASE_PORT: 27017
+          BIGCHAINDB_SERVER_BIND: 0.0.0.0:9984
+          BIGCHAINDB_WSSERVER_HOST: 0.0.0.0
+          BIGCHAINDB_WSSERVER_ADVERTISED_HOST: bigchaindb
+          BIGCHAINDB_TENDERMINT_HOST: tendermint
+          BIGCHAINDB_TENDERMINT_PORT: 26657
+        ports:
+          - "9984:9984"
+          - "9985:9985"
+          - "26658"
+        command: 'start'
+
+    tendermint:
+        image: kryha/tendermint:0.22.8
+        # volumes:
+        #   - ./tmdata:/tendermint
+        entrypoint: ''
+        ports:
+          - "26656:26656"
+          - "26657:26657"
+        command: sh -c "tendermint init && tendermint node --consensus.create_empty_blocks=false --proxy_app=tcp://bigchaindb:26658 --log_level=error"
+
+    grex:
+        environment:
+          - REACT_APP_GOOGLE_MAPS_API=$REACT_APP_GOOGLE_MAPS_API
+          - BDB=$BDB
+        depends_on:
+          - bigchaindb
+        image: kryha/grex:arm64
+        command: bash -c "cd Frontend; npm start & cd ../Backend/src; sleep 15; timeout --foreground 300 node startDrone.js -a 7 -t 5000 -r 5"
+        ports:
+          - 3000:3000
+          - 8080:8080

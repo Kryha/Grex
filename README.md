@@ -1,8 +1,16 @@
 # Grex
 
-- Step 1: Start Bigchaindb `make reset; make run`
-- Step 2: Start Frontend `npm start` in Frontend folder
-- Step 3: Start Backend `node startDrone.js -a 5` (for 5 drones)
+- Create a .env file in the root with the following contents:
+```
+REACT_APP_GOOGLE_MAPS_API=APIKEY
+BDB=bigchaindb
+```
+
+Replace the the `APIKEY` with a real Google Maps API Key: https://cloud.google.com/maps-platform/#get-started
+
+- For vanilla docker run: `docker-compose up grex`
+
+- Further documentation will follow, bear with us :)
 
 # Commandline args
 
