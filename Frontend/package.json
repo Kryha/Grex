@@ -21,7 +21,7 @@
     "redux": "^3.7.2",
     "reselect": "^3.0.1",
     "websocket": "^1.0.25",
-    "ws": "^5.1.1"
+    "ws": "^7.4.5"
   },
   "scripts": {
     "start": "react-scripts start",
