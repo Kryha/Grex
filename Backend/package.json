@@ -10,7 +10,7 @@
     "express": "^4.16.3",
     "fs": "0.0.1-security",
     "morgan": "^1.9.0",
-    "node-fetch": "^2.1.2",
+    "node-fetch": "^3.1.1",
     "node-jumping-night": "git+https://github.com/taniTk/node-jumping-night.git",
     "request": "^2.85.0",
     "seedrandom": "^2.4.4",
