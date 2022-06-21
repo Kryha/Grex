@@ -36,7 +36,7 @@ Markdown==3.0.1
 matplotlib==3.0.1
 mccabe==0.6.1
 nbformat==4.4.0
-numpy==1.15.3
+numpy==1.22.0
 pipreqs==0.4.9
 plotly==3.4.1
 protobuf==3.6.1
