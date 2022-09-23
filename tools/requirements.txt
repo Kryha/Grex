@@ -39,7 +39,7 @@ nbformat==4.4.0
 numpy==1.15.3
 pipreqs==0.4.9
 plotly==3.4.1
-protobuf==3.6.1
+protobuf==3.18.3
 psutil==5.4.8
 pyasn1==0.4.4
 pycparser==2.18
