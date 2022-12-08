@@ -6,7 +6,7 @@ base58==1.0.0
 bigchaindb-driver==0.5.2
 bleach==1.5.0
 cached-property==1.4.3
-certifi==2018.8.13
+certifi==2022.12.7
 cffi==1.11.5
 chardet==3.0.4
 cryptoconditions==0.7.2
